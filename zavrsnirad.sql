@@ -33,7 +33,7 @@ create table zaposlenici(
 create table odjel(
     sifra int not null primary key auto_increment,
     naziv varchar(50),
-    zaposlenici int not null
+    zaposlenici int 
 );
 
 
