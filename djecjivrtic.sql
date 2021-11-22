@@ -1,6 +1,6 @@
 drop database if exists djecjivrtic;
 create database djecjivrtic;
-# c:\xampp\mysql\bin\mysql -uedunova -pedunova --default_character_set=utf8 < c\djecjivrtic.sql
+# c:\xampp\mysql\bin\mysql -uedunova -pedunova --default_character_set=utf8 < c:\djecjivrtic.sql
 use djecjivrtic;
 
 create table vrtic(
