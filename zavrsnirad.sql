@@ -6,10 +6,10 @@ use evidencija;
 
 create table evidencija(
     sifra int primary key auto_increment,
-    datum datetime not null,
+    datum date not null,
     prijava boolean,
     zaposlenici int,
-    tijek int
+    vrstarada int
 );
 
 
@@ -20,7 +20,8 @@ create table zaposlenici(
     prezime varchar(50),
     oib char(11),
     odjel int,
-    evidencija int
+    id_card char(13),
+    vrstarada int
 
 );
 
@@ -31,7 +32,7 @@ create table odjel(
 );
 
 
-create table tijek(
+create table vrstarada(
     sifra int not null primary key auto_increment,
     redovanrad int,
     prekovremenirad int,
@@ -40,6 +41,6 @@ create table tijek(
 );
 
 
-alter table zaposlenici add foreign key (evidencija)references evidencija(sifra);
+alter table zaposlenici add foreign key (vrstarada)references vrstarada(sifra);
 alter table zaposlenici add foreign key (odjel) references odjel(sifra);
-alter table evidencija add foreign key(tijek) references tijek(sifra);
+alter table evidencija add foreign key(vrstarada) references vrstarada(sifra);
