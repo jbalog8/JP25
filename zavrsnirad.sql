@@ -4,12 +4,6 @@ create database evidencija character set utf8;
 use evidencija;
 
 
-create table evidencija(
-    sifra int not null primary key auto_increment,
-    radnovrijeme int not null
-     
-);
-
 create table radnovrijeme(
     sifra int primary key auto_increment,
     datum datetime not null,
@@ -48,5 +42,4 @@ create table tijek(
 
 alter table zaposlenici add foreign key (radnovrijeme)references radnovrijeme(sifra);
 alter table zaposlenici add foreign key (odjel) references odjel(sifra);
-alter table evidencija add foreign key (radnovrijeme) references radnovrijeme(sifra);
 alter table radnovrijeme add foreign key(tijek) references tijek(sifra);
