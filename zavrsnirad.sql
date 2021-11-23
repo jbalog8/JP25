@@ -7,8 +7,8 @@ use evidencija;
 create table evidencija(
     sifra int primary key auto_increment,
     datum datetime not null,
-    clockin boolean,
-    clockout boolean, 
+    prijava boolean,
+    zaposlenici int,
     tijek int
 );
 
