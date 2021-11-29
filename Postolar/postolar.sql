@@ -26,6 +26,7 @@ create table popravak(
 create table obuca(
     sifra int not null primary key auto_increment,
     korisnik int,
+    kolicina int,
     vrsta varchar(50)
 );
 
@@ -37,5 +38,8 @@ create table segrt(
 
 );
 
+
 alter table obuca add foreign key(korisnik) references korisnik(sifra);
 alter table segrt add foreign key(postolar) references postolar (sifra);
+alter table popravak add foreign key (obuca) references obuca(sifra);
+alter table popravak add foreign key (postolar)references postolar(sifra);
