@@ -19,6 +19,7 @@ create table popravak(
     sifra int not null primary key auto_increment,
     postolar int not null,
     obuca int,
+    segrt boolean,
     cijena decimal(18,2)
 
 );
