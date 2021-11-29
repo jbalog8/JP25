@@ -38,8 +38,14 @@ create table segrt(
 
 );
 
+create table postolar_korisnik(
+    postolar int,
+    korisnik int
+);
 
 alter table obuca add foreign key(korisnik) references korisnik(sifra);
 alter table segrt add foreign key(postolar) references postolar (sifra);
 alter table popravak add foreign key (obuca) references obuca(sifra);
 alter table popravak add foreign key (postolar)references postolar(sifra);
+alter table postolar_korisnik add foreign key(postolar) references postolar(sifra);
+alter table postolar_korisnik add foreign key(korisnik) references korisnik(sifra);
