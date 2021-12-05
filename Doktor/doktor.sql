@@ -37,3 +37,8 @@ create table medicinskasestra_lijecenje(
     medicinskasestra int not null,
     lijecenje int not null
 );
+
+alter table lijecenje add foreign key(doktor) references doktor(sifra);
+alter table lijecenje add foreign key(pacijent) references pacijent(sifra);
+alter table medicinskasestra_lijecenje add foreign key(medicinskasestra) references medicinskasestra(sifra);
+alter table medicinskasestra_lijecenje add foreign key(lijecenje) references lijecenje(sifra);
