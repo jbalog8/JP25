@@ -1,5 +1,6 @@
 drop database if exists doktor;
 create database doktor character set utf8;
+#c:\xampp\mysql\bin\mysql -uedunova -pedunova --default_character_set=utf8 < c:\doktor.sql
 use doktor;
 
 create table doktor(
